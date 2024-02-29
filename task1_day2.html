@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+       * {
+         box-sizing: border-box;
+        }
+
+body {
+  font-family: "Times New Roman";
+  padding: 50px;
+  background: #f1e0e0;
+}
+
+.header {
+  padding: 1px;
+  font-size: 35px;
+  text-align: center;
+  background: #f1e0e0;
+}
+
+.left{
+  float: left;
+  width: 75%;
+}
+
+.right{
+  float: left;
+  width: 25%;
+  padding-left: 25px;
+}
+
+.articles {
+  background-color: #f7c7c7;
+  width: 100%;
+  padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.box1 {
+  background-color: white;
+  padding: 25px;
+  margin-top: 25px;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: #e9e6e6;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>BlogSite</h1>
+      </div>
+      <hr>
+      <div class="box">
+        <div class="left">
+          <div class="box1">
+            <h1>Difference between Document and Window objects</h1>
+            <p style="font-size: large;">Feb 23, 2024</p>
+            <p style="font-size: larger;"><b><br>Binary Object Model</b></p>
+            <p>The current browser window or tab is represented by objects in the Browser Object Model. The <b>window object</b>, which can occasionally represent an iframe or a window or tab, is the highest item in the BOM. Properties of a window object include the <b>device's screen, location, and browsing history,</b> among others.<br><br> While a window object in a multi-tab browser represents a single tab, its methods (such as resizeTo()) and properties (such as innerHeight and innerWidth) impact the entire <b>browser window.</b></p>
+            <p style="font-size: larger;"><b><br>Data Object Model</b></p>
+            <p>A web page's Document Object Model is created by the browser when it loads. The HTML document is represented as a tree of objects (HTML, HEAD, BODY, and other HTML tags) by the <b>document object</b>. The HTML document is represented by this root element.</p>
+          </div>
+          <div class="box1">
+            <h2>Document vs Window</h2>
+            <p>A document object is created for each HTML document that loads into a window. The page's contents are contained in the document. JavaScript may add, remove, and change the HTML elements, CSS styles, and properties on a page by using the document object.</p>
+            <p><br><b>a.</b> In the JavaScript object hierarchy, the <b>window</b> is located at the root or top level. It is the root object of the Document object model (DOM) and a global/root object in JavaScript. An object inside the window object is called a <b>document</b>, and we manipulate objects inside documents using document objects.</p>
+            <p><br><b>b.</b> The <b>window object</b> is a representation of a tab or window that holds a DOM document. <b>Document object</b> is the property of window object which references the DOM document loaded in that window.<br>A document object can be accessed either by using window.document property or using document object directly, as window is global object. But windows objects properties cannot be accessed inside the document.</p>
+            <p><br><b>c.</b> Another difference is that window and document objects both contain properties and methods. The properties related to it are stored in the document object. While the properties related to it are stored in the window object. A few method names are the same in both objects, but their actions differ. For example, <b>document.open() generates a blank document</b> inside the window while <b>window.open() starts a new tab or window.</b></p>
+            <p><br><b>d.</b> Document is an object of window. Window is an object of the browser.</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="box1">
+            <h2>About Author</h2>
+            <p><b>Bhavya</b>, an aspiring tech geek.</p>
+          </div>
+          <div class="box1">
+            <h3>Related Content</h3>
+            <div class="articles"><a href="">HTML</a></div><br>
+            <div class="articles"><a href="">CSS</a></div><br>
+            <div class="articles"><a href="">JavaScript</a></div><br>
+            <form>
+                <select name="blogs" id="blogs" value="Read">
+                            <option selected disabled>Read</option>
+                            <option value="Networking">Networking</option>
+                            <option value="evolution">Evolution of HTTP</option>
+                            <option value="protocols">Common Internet Protocols</option>
+                        </select><br><br>
+                        <input class="search" type="search" placeholder="Search...">
+                </form>
+          </div>
+          <div class="box1">
+            <h3>Follow | Connect</h3>
+            <a href="https://github.com/rajb99" target="_blank">Bhavya_github</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h2>ADs</h2>
+      </div>
+</body>
+</html>
